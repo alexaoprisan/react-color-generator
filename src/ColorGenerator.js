@@ -1,14 +1,12 @@
 import randomColor from 'randomcolor';
 import { useState } from 'react';
-
-// responsible for color generation and display.
+import GeneratorButton from './GeneratorButton';
 
 export default function ColorGenerator() {
-  // Generate a random color
-  const textColor = randomColor();
-  // const hexCode =
+  // State to manage the random color
+  const [textColor, setTextColor] = useState(randomColor());
 
-  // Style object to set the text color
+  // Style object to set the background color
   const blockStyle = {
     backgroundColor: textColor,
     padding: '90px',
@@ -16,5 +14,20 @@ export default function ColorGenerator() {
     display: 'inline-block',
   };
 
-  return <div style={blockStyle}> </div>;
+  // Function to generate and set a new random color
+  const generateRandomColor = () => {
+    const newColor = randomColor();
+    setTextColor(newColor);
+  };
+
+  return (
+    <div>
+      <div style={blockStyle}></div>
+      <button onClick={generateRandomColor}>Generate</button>
+      <p>hex code?</p>
+    </div>
+  );
 }
+
+// put button under colorblock
+// generate hex code inside color block

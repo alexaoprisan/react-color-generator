@@ -7,7 +7,6 @@ export default function App() {
     <>
       <h1>Random Color Generator</h1>
       <ColorGenerator />
-      <GeneratorButton />
     </>
   );
 }
