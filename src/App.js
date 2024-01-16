@@ -1,6 +1,4 @@
 import ColorGenerator from './ColorGenerator';
-import GeneratorButton from './GeneratorButton.js';
-import logo from './logo.svg';
 
 export default function App() {
   return (
