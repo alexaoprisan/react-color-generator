@@ -23,7 +23,7 @@ export default function ColorGenerator() {
   return (
     <div>
       <div style={blockStyle}>
-        <p
+        <div
           style={{
             position: 'absolute',
             top: '50%',
@@ -32,7 +32,7 @@ export default function ColorGenerator() {
           }}
         >
           Generated color: {textColor}
-        </p>
+        </div>
       </div>
       <br />
       <button onClick={generateRandomColor}>Generate</button>
